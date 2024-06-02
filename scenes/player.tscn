@@ -1,0 +1,164 @@
+[gd_scene load_steps=21 format=3 uid="uid://bh08iewbdgju1"]
+
+[ext_resource type="Texture2D" uid="uid://b3bittjish3cn" path="res://assets/characters/PandaSpriteIdle.png" id="1_10bww"]
+[ext_resource type="Texture2D" uid="uid://cqyk1tuj7goj8" path="res://assets/characters/PandaSpriteRun.png" id="2_j36eg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tq21k"]
+atlas = ExtResource("1_10bww")
+region = Rect2(0, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gdvfl"]
+atlas = ExtResource("1_10bww")
+region = Rect2(48, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nb3ag"]
+atlas = ExtResource("1_10bww")
+region = Rect2(96, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vqu8o"]
+atlas = ExtResource("2_j36eg")
+region = Rect2(0, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_klgtf"]
+atlas = ExtResource("2_j36eg")
+region = Rect2(48, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xh2t1"]
+atlas = ExtResource("1_10bww")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_knmiy"]
+atlas = ExtResource("1_10bww")
+region = Rect2(48, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k50kn"]
+atlas = ExtResource("1_10bww")
+region = Rect2(96, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xs0r5"]
+atlas = ExtResource("2_j36eg")
+region = Rect2(48, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_un8oo"]
+atlas = ExtResource("2_j36eg")
+region = Rect2(96, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_264oq"]
+atlas = ExtResource("1_10bww")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_87ev3"]
+atlas = ExtResource("1_10bww")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sjyoo"]
+atlas = ExtResource("1_10bww")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_23phb"]
+atlas = ExtResource("2_j36eg")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3biec"]
+atlas = ExtResource("2_j36eg")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dhap6"]
+atlas = ExtResource("2_j36eg")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_koetm"]
+atlas = ExtResource("2_j36eg")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a2ujx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tq21k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gdvfl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nb3ag")
+}],
+"loop": true,
+"name": &"PandaBackIdle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vqu8o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_klgtf")
+}],
+"loop": true,
+"name": &"PandaBackRun",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xh2t1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_knmiy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k50kn")
+}],
+"loop": true,
+"name": &"PandaFrontIdle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xs0r5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_un8oo")
+}],
+"loop": true,
+"name": &"PandaFrontRun",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_264oq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_87ev3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sjyoo")
+}],
+"loop": true,
+"name": &"PandaSideIdle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_23phb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3biec")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dhap6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_koetm")
+}],
+"loop": true,
+"name": &"PandaSideRun",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_a2ujx")
+animation = &"PandaBackRun"
